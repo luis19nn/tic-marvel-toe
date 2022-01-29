@@ -12,10 +12,15 @@ html {
   bottom: 0;
   z-index: -1;
 
-  background: linear-gradient(
-    225deg,
-    var(--color-1),
-    var(--color-2),
-    var(--color-3)
-  );
+  background: linear-gradient(45deg, var(--color-1), var(--color-2));
+}
+
+body {
+  height: 100%;
+  width: 100%;
+
+  background-image: url("assets/bg/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

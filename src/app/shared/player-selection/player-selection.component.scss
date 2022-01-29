@@ -1,0 +1,57 @@
+@import "../../../config-scss/rem-calc.scss";
+
+:host {
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      width: rem-calc(340);
+      height: rem-calc(340);
+
+      border-radius: rem-calc(100);
+    }
+
+    h1 {
+      color: var(--white);
+      font-size: rem-calc(24);
+      font-weight: 700;
+
+      margin: 0 auto;
+      margin-top: rem-calc(15);
+      margin-bottom: rem-calc(15);
+    }
+
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: rem-calc(10) rem-calc(10);
+      background-color: var(--white);
+
+      border-radius: rem-calc(10);
+
+      input {
+        width: 95%;
+        background: none;
+        border: none;
+
+        font-size: rem-calc(16);
+
+        color: var(--black);
+
+        &::placeholder {
+          color: var(--black);
+          font-weight: 100;
+        }
+      }
+
+      img {
+        height: rem-calc(20);
+        width: rem-calc(20);
+      }
+    }
+  }
+}
