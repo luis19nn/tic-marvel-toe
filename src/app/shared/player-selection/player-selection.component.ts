@@ -7,11 +7,17 @@ import { MarvelApiService } from 'src/app/service/marvel-api.service';
   styleUrls: ['./player-selection.component.scss'],
 })
 export class PlayerSelectionComponent implements OnInit {
+  public character: any;
+
   constructor(private marvelApiService: MarvelApiService) {}
 
   ngOnInit(): void {}
 
   public getSearch(value: string) {
     this.marvelApiService.setName(value);
+
+    this.marvelApiService.apiGetCharacter.subscribe((res) => {
+      this.character = res;
+    });
   }
 }

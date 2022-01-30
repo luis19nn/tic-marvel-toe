@@ -1,6 +1,13 @@
 <section>
-  <img src="assets/characterPic.svg" alt="Player Icon" />
-  <h1>Character's Name</h1>
+  <img
+    [src]="
+      character?.thumbnail
+        ? character?.thumbnail.path + '.' + character?.thumbnail.extension
+        : 'assets/characterPic.svg'
+    "
+    alt="Player Icon"
+  />
+  <h1>{{ character?.name ? character.name : "Character's Name" }}</h1>
 
   <search (emmitSearch)="getSearch($event)"></search>
 </section>

@@ -7,12 +7,20 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   @Output() public emmitSearch: EventEmitter<string> = new EventEmitter();
+  public timer: any;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   public search(value: string) {
-    this.emmitSearch.emit(value);
+    if (value) {
+      clearTimeout(this.timer);
+      this.timer = setTimeout(() => this.emmitSearch.emit(value), 500);
+    }
+  }
+
+  public onSubmit(value: any) {
+    if (value.keyCode === 13) value.preventDefault();
   }
 }

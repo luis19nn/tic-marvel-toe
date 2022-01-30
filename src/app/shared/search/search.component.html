@@ -3,6 +3,7 @@
     type="text"
     #input
     (keyup)="search(input.value)"
+    (keydown)="onSubmit($event)"
     placeholder="Search Character..."
   />
   <img src="assets/icons/search.svg" alt="Search Character" />
