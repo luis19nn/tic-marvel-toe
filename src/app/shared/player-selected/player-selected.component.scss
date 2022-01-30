@@ -1,0 +1,73 @@
+@import "../../../config-scss/rem-calc.scss";
+
+:host {
+  section {
+    display: flex;
+
+    margin-bottom: rem-calc(20);
+
+    img {
+      width: rem-calc(140);
+      height: rem-calc(140);
+
+      border-radius: rem-calc(500);
+    }
+
+    div.text {
+      display: flex;
+      flex-direction: column;
+
+      padding-left: rem-calc(10);
+
+      h3 {
+        color: var(--white);
+        font-family: Marvel, sans-serif;
+        font-size: rem-calc(24);
+        font-weight: 700;
+        letter-spacing: rem-calc(1.8);
+
+        margin-bottom: rem-calc(15);
+      }
+
+      div.pontuation {
+        p {
+          margin-bottom: rem-calc(5);
+          font-weight: 700;
+        }
+
+        p.victories {
+          color: var(--black);
+          text-align: center;
+
+          background-color: var(--color-4);
+          border-radius: rem-calc(20);
+
+          width: rem-calc(95);
+          padding: rem-calc(5);
+        }
+
+        p.defeats {
+          color: var(--white);
+          text-align: center;
+
+          background-color: var(--color-error);
+          border-radius: rem-calc(20);
+
+          width: rem-calc(95);
+          padding: rem-calc(5);
+        }
+
+        p.draws {
+          color: var(--white);
+          text-align: center;
+
+          background-color: var(--color-2);
+          border-radius: rem-calc(20);
+
+          width: rem-calc(95);
+          padding: rem-calc(5);
+        }
+      }
+    }
+  }
+}

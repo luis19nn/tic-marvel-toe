@@ -15,8 +15,5 @@
     }}
   </h1>
 
-  <search (emmitSearch)="getSearch($event)"></search>
-  <div *ngIf="errorAPI" class="errorAPI">
-    <p>Character not found.</p>
-  </div>
+  <search (emmitSearch)="getSearch($event)" [error]="errorAPI"></search>
 </section>

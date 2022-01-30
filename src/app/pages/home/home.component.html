@@ -1,2 +1,26 @@
-<player-selection></player-selection>
-<player-selection></player-selection>
+<ng-template [ngIf]="!selected">
+  <div class="selection">
+    <player-selection
+      (emmitCharacter)="getCharacter($event, '--player-1')"
+    ></player-selection>
+
+    <player-selection
+      (emmitCharacter)="getCharacter($event, '--player-2')"
+    ></player-selection>
+  </div>
+</ng-template>
+
+<button
+  *ngIf="player1 && player2 && !selected"
+  (click)="onSubmit()"
+  class="btn __center"
+>
+  START
+</button>
+
+<ng-template [ngIf]="selected">
+  <div class="selected">
+    <player-selected [player]="character1"></player-selected>
+    <player-selected [player]="character2"></player-selected>
+  </div>
+</ng-template>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MarvelApiService } from 'src/app/service/marvel-api.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { MarvelApiService } from 'src/app/service/marvel-api.service';
   styleUrls: ['./player-selection.component.scss'],
 })
 export class PlayerSelectionComponent implements OnInit {
+  @Output() public emmitCharacter: EventEmitter<string> = new EventEmitter();
+
   public character: any;
   public errorAPI: boolean = false;
 
@@ -21,6 +23,8 @@ export class PlayerSelectionComponent implements OnInit {
       next: (res) => {
         if (res !== undefined) {
           this.character = res;
+          this.emmitCharacter.emit(this.character);
+
           this.errorAPI = false;
         } else {
           this.errorAPI = true;

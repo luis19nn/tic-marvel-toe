@@ -1,10 +1,23 @@
 @import "../../../config-scss/rem-calc.scss";
 
 :host {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  flex-wrap: wrap;
+  .selection {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
 
-  height: 100%;
+    height: 100%;
+  }
+
+  .selected {
+    position: absolute;
+    bottom: rem-calc(20);
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
 }

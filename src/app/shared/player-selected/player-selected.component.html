@@ -1,0 +1,18 @@
+<section>
+  <img
+    [src]="player.thumbnail.path + '.' + player?.thumbnail.extension"
+    alt="Player Icon"
+  />
+
+  <div class="text">
+    <h3>
+      {{ player.name.toUpperCase() }}
+    </h3>
+
+    <div class="pontuation">
+      <p class="victories">Victories: 0</p>
+      <p class="defeats">Defeats: 0</p>
+      <p class="draws">Draws: 0</p>
+    </div>
+  </div>
+</section>

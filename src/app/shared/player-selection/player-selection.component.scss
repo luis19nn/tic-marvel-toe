@@ -24,19 +24,5 @@
       margin-top: rem-calc(15);
       margin-bottom: rem-calc(15);
     }
-
-    div.errorAPI > p {
-      position: absolute;
-
-      font-weight: 700;
-      color: var(--white);
-
-      background-color: var(--color-error);
-      border-radius: rem-calc(20);
-
-      width: rem-calc(150);
-      margin-top: rem-calc(10);
-      padding: rem-calc(10);
-    }
   }
 }
