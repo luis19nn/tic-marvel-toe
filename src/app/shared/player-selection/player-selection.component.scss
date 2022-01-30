@@ -15,8 +15,10 @@
 
     h1 {
       color: var(--white);
-      font-size: rem-calc(24);
+      font-family: Marvel, sans-serif;
+      font-size: rem-calc(30);
       font-weight: 700;
+      letter-spacing: rem-calc(1.8);
 
       margin: 0 auto;
       margin-top: rem-calc(15);

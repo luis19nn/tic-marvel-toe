@@ -7,7 +7,9 @@
     "
     alt="Player Icon"
   />
-  <h1>{{ character?.name ? character.name : "Character's Name" }}</h1>
+  <h1>
+    {{ character?.name ? character.name.toUpperCase() : "CHARACTER'S NAME" }}
+  </h1>
 
   <search (emmitSearch)="getSearch($event)"></search>
 </section>
