@@ -6,10 +6,10 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: rem-calc(10) rem-calc(10);
     background-color: var(--white);
-
     border-radius: rem-calc(10);
+
+    padding: rem-calc(10) rem-calc(10);
 
     input {
       width: 95%;
@@ -17,7 +17,6 @@
       border: none;
 
       font-size: rem-calc(16);
-
       color: var(--black);
 
       &::placeholder {

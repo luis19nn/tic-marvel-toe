@@ -1,15 +1,22 @@
 <section>
   <img
     [src]="
-      character?.thumbnail
-        ? character?.thumbnail.path + '.' + character?.thumbnail.extension
+      character !== undefined
+        ? character.thumbnail.path + '.' + character?.thumbnail.extension
         : 'assets/characterPic.png'
     "
     alt="Player Icon"
   />
   <h1>
-    {{ character?.name ? character.name.toUpperCase() : "CHARACTER'S NAME" }}
+    {{
+      character !== undefined
+        ? character.name.toUpperCase()
+        : "CHARACTER'S NAME"
+    }}
   </h1>
 
   <search (emmitSearch)="getSearch($event)"></search>
+  <div *ngIf="errorAPI" class="errorAPI">
+    <p>Character not found.</p>
+  </div>
 </section>

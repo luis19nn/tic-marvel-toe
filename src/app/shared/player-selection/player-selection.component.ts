@@ -8,6 +8,7 @@ import { MarvelApiService } from 'src/app/service/marvel-api.service';
 })
 export class PlayerSelectionComponent implements OnInit {
   public character: any;
+  public errorAPI: boolean = false;
 
   constructor(private marvelApiService: MarvelApiService) {}
 
@@ -16,8 +17,15 @@ export class PlayerSelectionComponent implements OnInit {
   public getSearch(value: string) {
     this.marvelApiService.setName(value);
 
-    this.marvelApiService.apiGetCharacter.subscribe((res) => {
-      this.character = res;
+    this.marvelApiService.apiGetCharacter.subscribe({
+      next: (res) => {
+        if (res !== undefined) {
+          this.character = res;
+          this.errorAPI = false;
+        } else {
+          this.errorAPI = true;
+        }
+      },
     });
   }
 }
