@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MarvelApiService } from 'src/app/service/marvel-api.service';
 
 @Component({
   selector: 'player-selection',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-selection.component.scss'],
 })
 export class PlayerSelectionComponent implements OnInit {
-  constructor() {}
+  constructor(private marvelApiService: MarvelApiService) {}
 
   ngOnInit(): void {}
+
+  public getSearch(value: string) {
+    this.marvelApiService.setName(value);
+  }
 }

@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 
 //Components
 import { PlayerSelectionComponent } from './player-selection/player-selection.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
-  declarations: [PlayerSelectionComponent],
+  declarations: [PlayerSelectionComponent, SearchComponent],
   exports: [PlayerSelectionComponent],
   imports: [CommonModule],
 })
