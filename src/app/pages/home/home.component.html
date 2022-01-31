@@ -19,6 +19,8 @@
 </button>
 
 <ng-template [ngIf]="selected">
+  <tic-tac-toe (emmitWinner)="getWinner($event)" class="game"></tic-tac-toe>
+
   <div class="selected">
     <player-selected [player]="character1"></player-selected>
     <player-selected [player]="character2"></player-selected>

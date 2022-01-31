@@ -10,6 +10,14 @@
     height: 100%;
   }
 
+  .game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 70vh;
+  }
+
   .selected {
     position: absolute;
     bottom: rem-calc(20);

@@ -31,4 +31,8 @@ export class HomeComponent implements OnInit {
   public onSubmit() {
     this.selected = true;
   }
+
+  public getWinner(winner: string) {
+    console.log('HOME: ' + winner);
+  }
 }
