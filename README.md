@@ -4,6 +4,10 @@ Um site para jogar jogo da velha com personagens da Marvel, utilizando HTML, SCS
 
 ## Como usar
 
+Inicialmente, digite na barra de pesquisa o nome de um personagem da Marvel que você queira, em `inglês`. Após escolher os dois personagens, clique em `START` e o jogo começará. O jogo da velha é o clássico, com as mesmas regras, e sempre que você vencer, perder ou empatar, sua pontuação será atualizada.
+
+## Como rodar
+
 Primeiro, faça um clone deste repositório, executando o comando `git clone https://github.com/luis19nn/tic-marvel-toe.git` no terminal. Ele irá fazer o download de todos os arquivos do sistema no diretório onde o comando rodou.
 
 Em seguida, navegue até a pasta com o sistema baixado, utilizando o comando `cd + caminho_da_pasta_no_seu_computador`.
