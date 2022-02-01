@@ -38,6 +38,14 @@ A página `home`, dentro da pasta `pages`, utiliza os componentes citados para r
 
 É também na `home` que é feita a lógica de pontuação, onde é decidido qual dos dois jogadores venceu, perdeu ou se empatou, e é enviado ao componente `player-selected` o resultado desta lógica.
 
+## Administração do GIT
+
+Inicialmente, havia decidido seguir o padrão GitFlow, que dita a criação de uma branch `develop`, onde será realizada a criação do código, uma branch `release`, a qual receberá versões do código desenvolvido na `develop` e enviará, se tudo ocorrer bem, para a `master` o seu código.
+
+Entretanto, pelo tamanho deste projeto, acabei optando por seguir o padrão GitHubFlow, onde há apenas a `master` e todas as alterações são feitas em uma branch chamada `feature`, criada quando há a necessidade de adicionar código na master, e, caso haja erro na `master`, há a branch `bugfix`, responsável por corrigir erros. A branch `master` nunca é tocada, é sempre utilizada estas duas branches auxiliares para adicionar ou corrigir código, como mostrado na seguinte imagem:
+
+![image](https://user-images.githubusercontent.com/58374776/152002718-b1653a38-1ef3-4465-aa55-2514f59d9801.png)
+
 ## Considerações finais
 
 Espero que goste deste projeto, com ele aprendi muito e me diverti fazendo. Quaisquer dúvidas, pode entrar em contato, meus contatos estão em minha página principal aqui mesmo no GitHub. Até a próxima!
