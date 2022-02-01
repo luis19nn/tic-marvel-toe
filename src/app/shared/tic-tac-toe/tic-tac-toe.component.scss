@@ -73,40 +73,9 @@
     /*
     X Icon
     */
-    .x::before,
-    .x::after {
-      content: "";
-
-      position: absolute;
-
-      width: rem-calc(13.5);
-      height: rem-calc(90);
-
-      background-color: var(--white);
-    }
-
-    .x::before {
-      transform: rotate(45deg);
-    }
-
-    .x::after {
-      transform: rotate(-45deg);
-    }
 
     /*
     O Icon
     */
-    .o::before {
-      content: "";
-
-      position: absolute;
-
-      width: rem-calc(60);
-      height: rem-calc(60);
-
-      background-color: transparent;
-      border: 15px solid var(--white);
-      border-radius: rem-calc(500);
-    }
   }
 }

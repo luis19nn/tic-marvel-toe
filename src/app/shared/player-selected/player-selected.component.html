@@ -1,4 +1,16 @@
 <section>
+  <div class="x-icon">
+    <ng-template [ngIf]="player.initialPlayer">
+      <div class="x"></div>
+    </ng-template>
+  </div>
+
+  <div class="o-icon">
+    <ng-template [ngIf]="!player.initialPlayer">
+      <div class="o"></div>
+    </ng-template>
+  </div>
+
   <img
     [src]="player.thumbnail.path + '.' + player?.thumbnail.extension"
     alt="Player Icon"
@@ -10,9 +22,9 @@
     </h3>
 
     <div class="pontuation">
-      <p class="victories">Victories: 0</p>
-      <p class="defeats">Defeats: 0</p>
-      <p class="draws">Draws: 0</p>
+      <p class="victories">Victories: {{ player.pontuation.victories }}</p>
+      <p class="defeats">Defeats: {{ player.pontuation.defeats }}</p>
+      <p class="draws">Draws: {{ player.pontuation.draws }}</p>
     </div>
   </div>
 </section>

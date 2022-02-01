@@ -6,6 +6,19 @@
 
     margin-bottom: rem-calc(20);
 
+    .x-icon {
+      position: relative;
+
+      top: rem-calc(-25);
+      left: rem-calc(-20);
+    }
+    .o-icon {
+      position: relative;
+
+      top: rem-calc(-25);
+      left: rem-calc(-50);
+    }
+
     img {
       width: rem-calc(140);
       height: rem-calc(140);

@@ -1,0 +1,14 @@
+@import "./rem-calc.scss";
+
+.o::before {
+  content: "";
+
+  position: absolute;
+
+  width: rem-calc(60);
+  height: rem-calc(60);
+
+  background-color: transparent;
+  border: 15px solid var(--white);
+  border-radius: rem-calc(500);
+}
