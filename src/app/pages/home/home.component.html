@@ -1,10 +1,12 @@
 <ng-template [ngIf]="!selected">
   <div class="selection">
     <player-selection
+      ngClass="slideInLeft"
       (emmitCharacter)="getCharacter($event, '--player-1')"
     ></player-selection>
 
     <player-selection
+      ngClass="slideInRight"
       (emmitCharacter)="getCharacter($event, '--player-2')"
     ></player-selection>
   </div>
@@ -12,6 +14,7 @@
 
 <button
   *ngIf="player1 && player2 && !selected"
+  ngClass="fadeIn"
   (click)="onSubmit()"
   class="btn __center"
 >
@@ -19,11 +22,21 @@
 </button>
 
 <ng-template [ngIf]="selected">
-  <tic-tac-toe (emmitWinner)="getWinner($event)" class="game"></tic-tac-toe>
+  <tic-tac-toe
+    ngClass="fadeIn"
+    (emmitWinner)="getWinner($event)"
+    class="game"
+  ></tic-tac-toe>
 
   <div class="selected">
-    <player-selected [player]="character1"></player-selected>
+    <player-selected
+      ngClass="slideInLeft"
+      [player]="character1"
+    ></player-selected>
 
-    <player-selected [player]="character2"></player-selected>
+    <player-selected
+      ngClass="slideInRight"
+      [player]="character2"
+    ></player-selected>
   </div>
 </ng-template>

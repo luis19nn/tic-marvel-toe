@@ -18,6 +18,11 @@
   </div>
 </div>
 
-<button *ngIf="hasWinner" (click)="restart()" class="btn __restart">
+<button
+  *ngIf="hasWinner"
+  ngClass="fadeIn"
+  (click)="restart()"
+  class="btn __restart"
+>
   RESTART
 </button>
